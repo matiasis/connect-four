@@ -1,0 +1,99 @@
+.player {
+
+  margin-top: 50px;
+  text-align: center;
+
+  > h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  > .waiting {
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  .board {
+    position: relative;
+    display: inline-block;
+    opacity: 0.6;
+
+    &.winner {
+      opacity: 0.4;
+      &:after {
+        opacity: 1;
+        content: 'WINNER';
+        position: absolute;
+        top: 200px;
+        width: 300px;
+        left: calc(50% - 150px);
+        color: green;
+        font-size: 80px;
+        font-weight: bold;
+      }
+    }
+
+    &.loser {
+      opacity: 0.4;
+      &:after {
+        opacity: 1;
+        content: 'LOSER';
+        position: absolute;
+        top: 200px;
+        width: 300px;
+        left: calc(50% - 150px);
+        color: red;
+        font-size: 80px;
+        font-weight: bold;
+      }
+    }
+
+    &.turn {
+      opacity: 1;
+    }
+
+    &:not(.turn) {
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+
+    > .row {
+
+      > .box {
+
+        display: inline-block;
+        background-color: #CCCCCC;
+        border: 2px solid gray;
+        width: 80px;
+        height: 80px;
+        padding: 30px 15px;
+        font-weight: bold;
+
+        &:not(.used):hover {
+          background-color: lightblue;
+        }
+
+        &:hover {
+          cursor: pointer;
+
+        }
+
+        &.used {
+          pointer-events: none;
+
+          &.one {
+            background-color: red;
+          }
+          &.two {
+            background-color: yellow;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

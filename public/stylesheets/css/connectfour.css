@@ -1,0 +1,206 @@
+/* line 5, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 1, ../scss/_player.scss */
+.player {
+  margin-top: 50px;
+  text-align: center;
+}
+/* line 6, ../scss/_player.scss */
+.player > h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+/* line 11, ../scss/_player.scss */
+.player > .waiting {
+  padding: 20px;
+  font-size: 20px;
+}
+/* line 16, ../scss/_player.scss */
+.player .board {
+  position: relative;
+  display: inline-block;
+  opacity: 0.6;
+}
+/* line 21, ../scss/_player.scss */
+.player .board.winner {
+  opacity: 0.4;
+}
+/* line 23, ../scss/_player.scss */
+.player .board.winner:after {
+  opacity: 1;
+  content: 'WINNER';
+  position: absolute;
+  top: 200px;
+  width: 300px;
+  left: calc(50% - 150px);
+  color: green;
+  font-size: 80px;
+  font-weight: bold;
+}
+/* line 36, ../scss/_player.scss */
+.player .board.loser {
+  opacity: 0.4;
+}
+/* line 38, ../scss/_player.scss */
+.player .board.loser:after {
+  opacity: 1;
+  content: 'LOSER';
+  position: absolute;
+  top: 200px;
+  width: 300px;
+  left: calc(50% - 150px);
+  color: red;
+  font-size: 80px;
+  font-weight: bold;
+}
+/* line 51, ../scss/_player.scss */
+.player .board.turn {
+  opacity: 1;
+}
+/* line 55, ../scss/_player.scss */
+.player .board:not(.turn) {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+/* line 62, ../scss/_player.scss */
+.player .board > .row > .box {
+  display: inline-block;
+  background-color: #CCCCCC;
+  border: 2px solid gray;
+  width: 80px;
+  height: 80px;
+  padding: 30px 15px;
+  font-weight: bold;
+}
+/* line 72, ../scss/_player.scss */
+.player .board > .row > .box:not(.used):hover {
+  background-color: lightblue;
+}
+/* line 76, ../scss/_player.scss */
+.player .board > .row > .box:hover {
+  cursor: pointer;
+}
+/* line 81, ../scss/_player.scss */
+.player .board > .row > .box.used {
+  pointer-events: none;
+}
+/* line 84, ../scss/_player.scss */
+.player .board > .row > .box.used.one {
+  background-color: red;
+}
+/* line 87, ../scss/_player.scss */
+.player .board > .row > .box.used.two {
+  background-color: yellow;
+}
+
+/* line 7, ../scss/connectfour.scss */
+body {
+  font-family: Helvetica, sans-serif;
+  background-color: #EEEEEE;
+}
+
+/* line 12, ../scss/connectfour.scss */
+.main {
+  text-align: center;
+}
+/* line 15, ../scss/connectfour.scss */
+.main > .container {
+  text-align: center;
+  margin-top: 100px;
+  background-color: #DDD;
+  padding: 30px;
+  border-bottom: 5px solid #BBB;
+}
+/* line 23, ../scss/connectfour.scss */
+.main > .container > h1 {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+/* line 29, ../scss/connectfour.scss */
+.main > .container > p {
+  margin-bottom: 30px;
+}
+/* line 33, ../scss/connectfour.scss */
+.main > .container > h2 {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+/* line 39, ../scss/connectfour.scss */
+.main > .container > .btn {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+}
+/* line 45, ../scss/connectfour.scss */
+.main > .container > .btn-warning {
+  margin-top: 10px;
+}
+/* line 49, ../scss/connectfour.scss */
+.main > .container > .btn-primary {
+  margin-bottom: 20px;
+}

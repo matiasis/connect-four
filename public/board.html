@@ -1,0 +1,15 @@
+<div class="board" data-ng-class="{'turn': (turn && (!winner && !loser)), 'winner': winner, 'loser': loser}">
+
+
+  <div class="row" data-ng-repeat="row in matrix" data-ng-init="row_index = $index">
+
+    <div class="box" data-ng-repeat="box in row" data-ng-click="select_box(row_index, $index)"
+         data-ng-class="{'used': box.used, 'one': box.player == 1, 'two': box.player == 2}">
+      <!--[{{row_index}} , {{$index}}]-->
+
+    </div>
+
+  </div>
+
+
+</div>
